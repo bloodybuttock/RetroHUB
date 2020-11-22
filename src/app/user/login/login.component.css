@@ -1,0 +1,25 @@
+.mx-auto{
+    margin: 50px;
+}
+
+.mb-1{
+    width: 700px;
+}
+
+h2{
+    margin-bottom: 20px;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-check-input{
+    margin-left: 120px;
+}
+
+.form-check-label{
+    margin-left: 155px;
+}

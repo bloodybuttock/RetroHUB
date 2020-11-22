@@ -1,0 +1,122 @@
+
+<div class="container 1">
+    <h4>FEATURED</h4>
+    
+        <div class="row">
+    
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <a routerLink="#">
+                            <img src="../../assets/images/new/hardcode1.png" alt="" width="100%">
+                            <a href="#" class="badge badge-success">Authentic</a>
+                            <a href="#" class="badge badge-danger">HOT DEAL</a>
+                        </a>
+                        <h4 class="card-title">Product name</h4>
+                        <h6 class="card-title">$59.45</h6>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="w#" class="btn btn-primary">Add to cart</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <a routerLink="#">
+                            <img src="../../assets/images/new/hardcode2.png" alt="" width="100%">
+                            <a href="#" class="badge badge-warning">Modded</a>
+                            <a href="#" class="badge badge-danger">HOT DEAL</a>
+    
+                        </a>
+                        <h4 class="card-title">Product name</h4>
+                        <h6 class="card-title">$59.45</h6>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Add to cart</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    
+    </div>
+    
+
+    <div class="container 2">
+    
+        <div class="row">
+       
+          <div class="col-sm-3" *ngFor="let products of products" >
+              <div class="card">
+                  <div class="card-body" >
+                      <a routerLink="detailProduct">
+                          <img src="http://localhost:3000/products/picture/{{products._id}}" alt="" width="100%">
+                      </a>
+                      <h5 class="card-title" style="min-height: 50px; max-height: 50px; overflow: hidden;">{{products.productName}}</h5>
+                      <h6 class="card-title">{{'$ '+products.price}}</h6>
+                      <p class="card-text" style="height:80px;">{{products.briefDescription}}</p>
+                      <!-- <a href="#" class="btn btn-primary" (click)="addCart(products._id)">Add to cart</a> -->
+                      <button class="btn btn-primary" (click)="addCartbutton()">Add to cart</button>
+                  </div>
+              </div>
+          </div>
+
+         
+        </div>
+    
+    </div>
+
+    
+
+    <div class="mx-auto" style="width: 165px;">
+    <nav aria-label="...">
+        <ul class="pagination">
+
+          <li class="page-item disabled">
+            <a class="page-link disabled" *ngIf="pagination.page===1" >Previous</a>
+            <a class="page-link" *ngIf="pagination.page!==1"  (click)="pageClick(pagination.page-1)">Previous</a>
+          </li>
+
+          <div  *ngFor="let page of page; index">
+            <li *ngIf="pagination.page!==page" class="page-item"><a class="page-link" (click)="pageClick(page)" >{{page}}</a></li>
+            <li *ngIf="pagination.page===page" class="page-item active">
+                <a class="page-link" >{{page}} <span class="sr-only">(current)</span></a>
+              </li>
+          </div>
+         
+          <li class="page-item">
+            <a class="page-link disabled" *ngIf="pagination.page===pagination.totalPage" >Next</a>
+            <a class="page-link" *ngIf="pagination.page!==pagination.totalPage"  (click)="pageClick(pagination.page+1)">Next</a>
+          </li>
+
+        </ul>
+      </nav>
+    </div>
+<!-- <div class="mx-auto" style="width: 165px;">
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+              <span class="sr-only">{{pagination.previousPage}}</span>
+            </a>
+          </li>
+
+         
+            <li *ngFor="let page of page; index" class="page-item">
+                <a *ngIf="pagination.page===page" class="page-link disabled" >{{page}}</a>
+                <a *ngIf="pagination.page!==page" class="page-link" (click)="pageClick(page)" href="">{{page}}</a>
+            </li>
+      
+
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+              <span class="sr-only">{{pagination.nexpage}}</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div> -->
+
+  <app-news></app-news>

@@ -1,0 +1,35 @@
+
+<div class="mx-auto" style="width: 765px;">
+<div class="card mb-1" >
+    <div class="row no-gutters" style="width: 1000px;">
+      <div class="col-md-4">
+        <img src="../../assets/images/pexels-anurag-sharma-2728255.jpg" class="card-img" alt="..." >
+      </div>
+      <div class="col-md-4 " style="width: 100px;" >
+        <div class="card-body" >
+            <form class="rightBody" [formGroup]="signinForm" (ngSubmit)="loginUser()">
+                <h2>LOGIN</h2>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" formControlName="email" id="exampleInputEmail1" aria-describedby="emailHelp" style="width: 300px;" placeholder="name@example.com">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" formControlName="password" id="exampleInputPassword1" style="width: 300px;">
+                </div>
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1" style="width: 300px;">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <div class="buttons">
+                    <button type="submit" class="btn btn-primary" style="width: 300px;">Submit</button>
+                    <a href="register">Sign up</a>
+                </div>
+              </form>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

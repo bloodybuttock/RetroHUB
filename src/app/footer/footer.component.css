@@ -1,0 +1,12 @@
+.bg-custom{
+    margin-top: 30px;
+    background-color: black;
+}
+
+.container-column {
+    flex-direction: column;
+}
+
+.mx-au{
+    margin-right: -157px;
+}
